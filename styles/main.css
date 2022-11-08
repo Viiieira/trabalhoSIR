@@ -1,0 +1,563 @@
+/* General Styling */
+:root {
+    /* Color Pallete */
+    --primary: rgb(38, 50, 64);
+    --secondary: rgb(195, 191, 199);
+    --tertiary: rgb(102, 129, 173);
+    --quaternary: rgb(137, 164, 195);
+    --quinary: rgb(121, 119, 128);
+
+    /* Fonts */
+    --serif: 'Lora', serif;
+    --sans-serif: 'Montserrat Alternates', sans-serif;
+
+    /* Sizes */
+    --min-height-navbar: 12vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s;
+    font-family: var(--serif);
+}
+
+html {scroll-behavior: smooth}
+
+body {
+    background-color: var(--primary);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--tertiary);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {text-decoration: underline;}
+
+.colored { color: var(--tertiary);}
+
+h1,
+h2,
+h3,
+h4,
+h5 {font-family: var(--sans-serif);}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Progress Bar */
+.progress-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8px;
+    background: transparent;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: var(--tertiary);
+    width: 0%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--quaternary);
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(38, 50, 64, .9);
+    color: #FFFFFF;
+    padding: 0rem 4rem;
+    /* min-height: var(--min-height-navbar); */
+}
+
+a.navbar-brand {
+    padding: 1rem 0;
+    display: block;
+    text-decoration: none;
+    /* font-family: var(--sans-serif); */
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: bold;
+}
+
+a.navbar-brand:hover,
+a.navbar-brand:focus {
+    color: var(--tertiary);
+}
+
+.navbar-toggler {
+    background: var(--tertiary);
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.navbar-toggler i {
+    color: var(--secondary);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1.5rem;
+    font-size: 1rem;
+    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    border-bottom: 4px solid var(--tertiary);
+    color: var(--tertiary);
+}
+
+@media only screen and (max-width: 425px) {
+    .navbar {
+        padding: 0rem 2rem;
+    }
+
+    a.navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+/* Header Hero */
+#hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: calc(2.5rem * .5) calc(7.5rem * .5);
+    background: linear-gradient(180deg, rgba(38, 50, 64, .8) 0%, rgba(38, 50, 64, 1) 90%), url('../images/me.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--secondary);
+}
+
+#hero .info {width: 100%}
+
+#hero h1 {font-size: 3rem;}
+
+#hero h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+#hero h3 span {color: #FFFFFF;}
+
+#hero #go-down {
+    width: 100%;
+    height: 10vh;
+    text-align: left;
+}
+
+#hero button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+#hero button:hover {
+    background-color: #FFFFFF;
+}
+
+/* Ajuste de Fontes para Mobile */
+@media screen and (max-width: 768px) {
+    #hero,
+    #hero #go-down {text-align: center;}
+
+    #hero h1 {font-size: 2rem;}
+
+    #hero h3,
+    #hero #go-down button {font-size: 1rem;}
+}
+
+/* About Me */
+#about-me {
+    width: 100%;
+    padding: calc((2.5rem * .5) + var(--min-height-navbar)) calc(7.5rem * .5);
+    text-align: center;
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+#about-me h1 {
+    margin-bottom: 5rem;
+    font-family: var(--serif);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+#about-me h1 span {
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+#about-me-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-me-card {
+    flex: 1 1 300px;
+    margin: 1rem 2rem;
+    text-align: left;
+}
+
+.about-me-card:last-child {
+    margin: 1rem 0;
+}
+
+.about-me-card h3 {
+    margin-bottom: 2.5rem;
+}
+
+.about-me-card h3 p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.about-me-card h3 .colored {font-size: 2.5rem;}
+
+.about-me-info p,
+.about-me-info li {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.about-me-info p {
+    margin-bottom: 0;
+}
+
+.about-me-info h5 {
+    color: #FFFFFF;
+    font-weight: 800;
+    margin: 1.5rem 0;
+    font-size: 1.25rem;
+}
+
+.about-me-info h5:last-child {
+    margin-bottom: 0;
+}
+
+.about-me-info h5 i {
+    color: #FFFFFF;
+    margin-right: 1rem;
+}
+
+.about-me-info ul li {
+    list-style: circle;
+    margin-bottom: .25rem;
+}
+
+.about-me-card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    #about-me, #education {
+        padding: calc((2.5rem * .5) + var(--min-height-navbar)) calc(2.5rem * .5);
+    }
+    
+    .about-me-card {
+        margin: 3rem 2rem;
+    }
+
+    .about-me-card:last-child {
+        margin: 1rem 2rem;
+    }
+}
+
+#education {
+    padding: calc((2.5rem * .5) + var(--min-height-navbar)) 1rem;
+    width: 100%;
+    color: var(--secondary);
+    font-family: var(--serif);
+}
+
+#education h1 {
+    margin-bottom: 5rem;
+    font-family: var(--serif);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+#education h1 span {
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.education-card {
+    border: 1px solid var(--quinary);
+    padding: 2rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    background-color: rgba(0,0,0,.125);
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    grid-template-columns: minmax(150px, 15%) 1fr;
+    text-align: left;
+}
+
+.education-card:last-child {
+    margin-bottom: 0px;
+}
+
+.education-date,
+.education-info {
+    margin: 2rem;
+}
+
+.education-card table {
+    width: 100%;
+}
+
+.education-date thead tr td:nth-child(even) {
+    text-align: right;
+}
+
+.education-date tr:first-child td {
+    font-size: 12px;
+}
+
+.education-date tbody tr:last-child td {
+    padding-top: 1rem;
+    width: 50%;
+    font-size: 1rem;
+}
+
+.education-date img {
+    width: 90px;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.education-date tbody td:last-child {
+    text-align: right;
+}
+
+.education-info h3 {
+    margin-bottom: 1.5rem;
+    font-family: var(--serif);
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #FFFFFF;
+}
+
+.education-info p{
+    text-indent: 1rem;
+    font-size: 1.25rem;
+}
+
+.education-date tr:nth-child(2) td {
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+    .education-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .education-date,
+    .education-info {
+        flex: 1 1 400px;
+    }
+
+    .education-card table {
+        width: 100%;
+    }
+
+    .education-card {
+        padding: 1rem;
+        font-size: .85rem;
+        text-indent: 0;
+    }
+
+    .education-card h3 {
+        font-size: 1rem;
+    }
+
+    .education-date,
+    .education-info {
+        margin: 1rem;
+    }
+}
+
+#contact-me-form {
+    padding: calc((2.5rem * .5) + var(--min-height-navbar)) calc(7.5rem * .5);
+    color: #FFFFFF;
+    text-align: left;
+}
+
+#contact-me-form h1, #contact-me-form h3 {
+    text-align: center;
+}
+
+#contact-me-form h3 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+#contact-me-form form {
+    width: 100%;
+    text-align: left;
+}
+
+#contact-me-form input,
+#contact-me-form textarea {
+    width: 100%;
+    border: none;
+    background-color: rgba(0,0,0,.25);
+    padding: 10px 20px;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+}
+
+#contact-me-form input:hover, #contact-me-form input:focus,
+#contact-me-form textarea:hover, #contact-me-form textarea:focus {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    border-radius: 4px;
+}
+
+#contact-me-form label {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+#contact-me-form .form-input {
+    margin-bottom: 20px;
+}
+
+#contact-me-form button[type="submit"] {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+#form-info {
+    margin-top: 20px;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+@media screen and (max-width: 425px) {
+    #contact-me-form {
+        padding: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: rgba(0,0,0,.25);
+    opacity: 0.9;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#contacts-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#contacts-wrapper > .contact-card {
+    flex: 0 1 300px;
+    background-color: rgba(0,0,0,.125);
+    border: 1px solid var(--quinary);
+    padding: 2rem;
+    min-width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contacts-wrapper > .contact-card > hr{
+    border: 1px solid var(--secondary);
+}
+
+#contacts-wrapper > .contact-card > .title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+#contacts-wrapper > .contact-card > .icon > a >i.fa-solid,
+#contacts-wrapper > .contact-card > .icon > a > i.fa-brands {
+    font-size: 4rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+#contacts-wrapper > .contact-card > .contact-button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#contacts-wrapper > .contact-card > .contact-button:hover,
+#contacts-wrapper > .contact-card > .contact-button:focus {
+    background-color: #FFFFFF;
+}

@@ -1,0 +1,42 @@
+/* 
+
+Navbar
+
+Hero Section {
+    - Name;                 ✅
+}
+
+About Me Section {
+	- About Me text;   		      Mais; sobre mim
+	- Hard and Soft Skills;       O que; eu ofereço
+	- Foto;                         
+}
+
+Skills Section {
+    - Languages;                  Colocar Gráficos Circulares com percentagens na borda e texto centrado    
+	- Certifications;	          Certificado do DataCamp
+}
+
+Education Section		          Ensino Básico, Ensino Secundário e Ensino Superior
+
+Form Contact me Section {
+	- Form;				          Nome, Apelido, E-mail, Mensagem
+	- Contacts;			          E-mail Escolar, Telefone, LinkedIn
+}
+
+Footer                      ✅   Número de Cartão, Nome, Ano
+
+--- Anos Letivos
+
+Primária
+2017 / 2018 - 2011
+
+St. Marta
+2011 / 2012 - 2017
+
+Liceu
+2017 / 2018 - 2020
+
+Ensino Superior
+
+*/
