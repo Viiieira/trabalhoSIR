@@ -182,54 +182,45 @@
 
     <form action="#" method="post" autocomplete="off">
         <div class="form-input">
-            <label for="nameField">Name <span class="text-danger">*</span></label>
-            <input type="text" name="name" id="nameField" required>
+            <label for="nameField">Name <span class="text-secondary">*</span></label>
+            <input type="text" name="name" id="nameField" placeholder="John Doe" required>
         </div>
         <div class="form-input">
-            <label for="emailField">E-mail <span class="text-danger">*</span></label>
-            <input type="email" name="email" id="emailField" required>
+            <label for="emailField">E-mail <span class="text-secondary">*</span></label>
+            <input type="email" name="email" id="emailField" placeholder="johndoe@company.com" required>
         </div>
         <div class="form-input">
-            <label for="messageFeild">Message <span class="text-danger">*</span></label>
-            <textarea name="message" id="messageField" cols="30" rows="10" required></textarea>
+            <label for="messageFeild">Message <span class="text-secondary">*</span></label>
+            <textarea name="message" id="messageField" cols="30" rows="10" placeholder="Hi Hugo, pleased to talk to you..." required></textarea>
         </div>
         <button type="submit" style="color: #303030;"><i class="fa-solid fa-paper-plane-top"></i> Send</button>
     </form>
-    <div id="form-info">
-        <p><span class="text-danger">*</span> -  Mandatory fields</p>
-    </div>
 
     <div id="contacts-wrapper">
-        <div class="contact-card">
-            <div class="title">E-mail</div>
-            <hr>
-            <div class="icon">
-                <a href="mailto:hugov@ipvc.pt"><i class="fa-solid fa-envelope"></i></a>
-                <p>hugov@ipvc.pt</p>
+        <a href="mailto:hugov@ipvc.pt">
+            <div class="contact-card">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>hugov@ipvc.pt</p>
+                </div>
             </div>
-            <hr>
-            <a href="mailto:hugov@ipvc.pt" class="contact-button">Contact Me</a>
-        </div>
-        <div class="contact-card">
-            <div class="title">Phone Number</div>
-            <hr>
-            <div class="icon">
-                <a href="tel:+351938854803"><i class="fa-solid fa-phone"></i></a>
-                <p>+351 938 854 803</p>
+        </a>
+        <a href="tel:+351938854803">
+            <div class="contact-card">
+                <div class="icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+351 938 854 803</p>
+                </div>
             </div>
-            <hr>
-            <a href="tel:+351938854803" class="contact-button">Contact Me</a>
-        </div>
-        <div class="contact-card">
-            <div class="title">LinkedIn</div>
-            <hr>
-            <div class="icon">
-                <a href="https://www.linkedin.com/in/hugovieira0512/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <p>hugovieira0512</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hugovieira0512/" target="_blank">
+            <div class="contact-card">
+                <div class="icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>hugovieira0512</p>
+                </div>
             </div>
-            <hr>
-            <a href="https://www.linkedin.com/in/hugovieira0512/" target="_blank" class="contact-button">Contact Me</a>
-        </div>
+        </a>
     </div>
 </section>
 

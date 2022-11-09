@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 /* General Styling */
 :root {
@@ -44,12 +44,6 @@ a:hover,
 a:focus {text-decoration: underline;}
 
 .colored { color: var(--tertiary);}
-
-h1,
-h2,
-h3,
-h4,
-h5 {font-family: var(--sans-serif);}
 
 h1 {
     font-size: 3rem;
@@ -171,7 +165,7 @@ a.navbar-brand:focus {
 #hero #go-down {
     width: 100%;
     height: 10vh;
-    text-align: left;
+    text-align: justify;
 }
 
 #hero button {
@@ -182,7 +176,6 @@ a.navbar-brand:focus {
     border: none;
     font-size: 14px;
     cursor: pointer;
-    font-family: var(--serif);
     font-weight: 600;
     font-style: italic;
     margin-top: 15px;
@@ -214,7 +207,6 @@ a.navbar-brand:focus {
 
 #about-me h1 {
     margin-bottom: 5rem;
-    font-family: var(--serif);
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
@@ -235,7 +227,7 @@ a.navbar-brand:focus {
 .about-me-card {
     flex: 1 1 300px;
     margin: 1rem 2rem;
-    text-align: left;
+    text-align: justify;
 }
 
 .about-me-card:last-child {
@@ -315,14 +307,43 @@ a.navbar-brand:focus {
 
 #education {
     padding: calc((2.5rem * .5) + var(--min-height-navbar)) calc(7.5rem * .5);
-    width: 100%;
     color: var(--secondary);
-    font-family: var(--serif);
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+	#education {
+		max-width: 70%;
+		margin: 0 auto;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+	#education {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+	#education {
+		max-width: 90%;
+	}
+}
+
+/* Mobile/Smal devices (600px and down) */
+@media only screen and (max-width: 600px) {
+	#education {
+		max-width: 100%;
+	}
 }
 
 #education h1 {
     margin-bottom: 5rem;
-    font-family: var(--serif);
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
@@ -341,18 +362,13 @@ a.navbar-brand:focus {
     margin-bottom: 3rem;
     background-color: rgba(0,0,0,.125);
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
     grid-template-columns: minmax(150px, 15%) 1fr;
-    text-align: left;
+    grid-gap: 3rem;
+    text-align: justify;
 }
 
 .education-card:last-child {
     margin-bottom: 0px;
-}
-
-.education-date,
-.education-info {
-    margin: 2rem;
 }
 
 .education-card table {
@@ -386,7 +402,6 @@ a.navbar-brand:focus {
 
 .education-info h3 {
     margin-bottom: 1.5rem;
-    font-family: var(--serif);
     letter-spacing: 2px;
     font-weight: 800;
     font-size: 1.25rem;
@@ -444,7 +459,7 @@ a.navbar-brand:focus {
 #contact-me-form {
     padding: calc((2.5rem * .5) + var(--min-height-navbar)) calc(7.5rem * .5);
     color: #FFFFFF;
-    text-align: left;
+    text-align: justify;
 }
 
 #contact-me-form h1, #contact-me-form h3 {
@@ -457,9 +472,38 @@ a.navbar-brand:focus {
 }
 
 #contact-me-form form {
-    width: 100%;
-    text-align: left;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: justify;
     margin-top: 5rem;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+	#contact-me-form form {
+		max-width: 70%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+	#contact-me-form form {
+		max-width: 80%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+	#contact-me-form form {
+		max-width: 90%;
+	}
+}
+
+/* Mobile/Smal devices (600px and down) */
+@media only screen and (max-width: 600px) {
+	#contact-me-form form {
+		max-width: 100%;
+	}
 }
 
 #contact-me-form input,
@@ -474,7 +518,7 @@ a.navbar-brand:focus {
 
 #contact-me-form input:hover, #contact-me-form input:focus,
 #contact-me-form textarea:hover, #contact-me-form textarea:focus {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
     border-radius: 4px;
 }
 
@@ -489,23 +533,18 @@ a.navbar-brand:focus {
 
 #contact-me-form button[type="submit"] {
     background-color: var(--secondary);
-    color: var(--primary);
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
     font-size: 14px;
     cursor: pointer;
-    font-family: var(--serif);
     font-weight: 600;
     font-style: italic;
     margin-top: 15px;
 }
 
-#form-info {
-    margin-top: 20px;
-    color: var(--secondary);
-    font-style: italic;
-}
+#contact-me-form button[type="submit"]:hover,
+#contact-me-form button[type="submit"]:focus { background-color: #FFF; }
 
 @media screen and (max-width: 425px) {
     #contact-me-form {
@@ -529,14 +568,17 @@ footer {
 }
 
 #contacts-wrapper {
-    width: 100%;
+    max-width: 60%;
+    margin: 3rem auto 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
 }
 
-#contacts-wrapper > .contact-card {
+#contacts-wrapper a { color: #FFF; text-decoration: none; }
+
+#contacts-wrapper .contact-card {
     flex: 0 1 300px;
     background-color: rgba(0,0,0,.125);
     border: 1px solid var(--quinary);
@@ -548,38 +590,43 @@ footer {
     gap: 1rem;
 }
 
-#contacts-wrapper > .contact-card > hr{
-    border: 1px solid var(--secondary);
+#contacts-wrapper a:hover .contact-card,
+#contacts-wrapper a:focus .contact-card {
+    background-color: rgba(0,0,0,.25);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 
-#contacts-wrapper > .contact-card > .title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #FFFFFF;
-}
-
-#contacts-wrapper > .contact-card > .icon > a >i.fa-solid,
-#contacts-wrapper > .contact-card > .icon > a > i.fa-brands {
+#contacts-wrapper .contact-card > .icon i.fa-solid,
+#contacts-wrapper .contact-card > .icon i.fa-brands {
     font-size: 4rem;
     color: #FFFFFF;
     margin-bottom: 10px;
 }
 
-#contacts-wrapper > .contact-card > .contact-button {
-    background-color: var(--secondary);
-    color: var(--primary);
-    padding: 5px 10px;
-    border-radius: 20px;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-    font-family: var(--serif);
-    font-weight: 600;
-    font-style: italic;
-    text-decoration: none;
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+	#contacts-wrapper {
+		max-width: 70%;
+	}
 }
 
-#contacts-wrapper > .contact-card > .contact-button:hover,
-#contacts-wrapper > .contact-card > .contact-button:focus {
-    background-color: #FFFFFF;
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+	#contacts-wrapper {
+		max-width: 80%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+	#contacts-wrapper {
+		max-width: 90%;
+	}
+}
+
+/* Mobile/Smal devices (600px and down) */
+@media only screen and (max-width: 600px) {
+	#contacts-wrapper {
+		max-width: 100%;
+	}
 }
