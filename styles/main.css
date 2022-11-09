@@ -548,7 +548,7 @@ a.navbar-brand:focus {
 
 @media screen and (max-width: 425px) {
     #contact-me-form {
-        padding: 1rem;
+        padding: calc((2.5rem * .5) + var(--min-height-navbar)) 1rem;
     }
 }
 
@@ -568,12 +568,18 @@ footer {
 }
 
 #contacts-wrapper {
-    max-width: 60%;
+    max-width: 90%;
     margin: 3rem auto 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
+}
+
+@media screen and (max-width: 425px) {
+    #contacts-wrapper {
+        padding: 3rem auto;
+    }
 }
 
 #contacts-wrapper a { color: #FFF; text-decoration: none; }
@@ -601,32 +607,4 @@ footer {
     font-size: 4rem;
     color: #FFFFFF;
     margin-bottom: 10px;
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and down) */
-@media only screen and (max-width: 1200px) {
-	#contacts-wrapper {
-		max-width: 70%;
-	}
-}
-
-/* Large devices (laptops/desktops, 992px and down) */
-@media only screen and (max-width: 992px) {
-	#contacts-wrapper {
-		max-width: 80%;
-	}
-}
-
-/* Medium devices (landscape tablets, 768px and down) */
-@media only screen and (max-width: 768px) {
-	#contacts-wrapper {
-		max-width: 90%;
-	}
-}
-
-/* Mobile/Smal devices (600px and down) */
-@media only screen and (max-width: 600px) {
-	#contacts-wrapper {
-		max-width: 100%;
-	}
 }
