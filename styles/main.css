@@ -6,8 +6,9 @@
     --primary: rgb(38, 50, 64);
     --secondary: rgb(195, 191, 199);
     --tertiary: rgb(102, 129, 173);
-    --quaternary: rgb(137, 164, 195);
     --quinary: rgb(121, 119, 128);
+
+    --title-color: rgb(255, 255, 255);
 
     /* Fonts */
     --serif: 'Lora', serif;
@@ -71,13 +72,13 @@ h1 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--quaternary);
+    background-color: var(--tertiary);
 }
 
 /* Navbar */
 .navbar {
-    background-color: rgba(38, 50, 64, .9);
-    color: #FFFFFF;
+    background-color: var(--primary);
+    color: var(--title-color);
     padding: 0rem 4rem;
     /* min-height: var(--min-height-navbar); */
 }
@@ -87,7 +88,7 @@ a.navbar-brand {
     display: block;
     text-decoration: none;
     font-size: 2.5rem;
-    color: #FFFFFF;
+    color: var(--title-color);
     font-style: italic;
     font-weight: bold;
 }
@@ -116,10 +117,11 @@ a.navbar-brand:focus {
     padding: 1.5rem;
     font-size: 1rem;
     position: relative;
-    color: #FFFFFF;
+    color: var(--title-color);
     text-decoration: none;
     text-align: center;
     border-bottom: 4px solid transparent;
+    cursor: pointer;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
@@ -135,6 +137,10 @@ a.navbar-brand:focus {
     a.navbar-brand {
         font-size: 1.5rem;
     }
+}
+
+#toggleLight {
+    font-size: 1.6rem;
 }
 
 /* Header Hero */
@@ -158,9 +164,8 @@ a.navbar-brand:focus {
 #hero h3 {
     font-weight: 400;
     font-size: 1.5rem;
+    color: var(--title-color);
 }
-
-#hero h3 span {color: #FFFFFF;}
 
 #hero #go-down {
     width: 100%;
@@ -168,7 +173,7 @@ a.navbar-brand:focus {
     text-align: justify;
 }
 
-#hero button {
+#hero button, #contact-me-form form button[type="submit"] {
     background-color: var(--secondary);
     color: var(--primary);
     padding: 10px 20px;
@@ -182,7 +187,7 @@ a.navbar-brand:focus {
 }
 
 #hero button:hover {
-    background-color: #FFFFFF;
+    background-color: var(--title-color);
 }
 
 /* Ajuste de Fontes para Mobile */
@@ -210,7 +215,7 @@ a.navbar-brand:focus {
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
-    color: #FFFFFF;
+    color: var(--title-color);
 }
 
 #about-me h1 span {
@@ -257,7 +262,7 @@ a.navbar-brand:focus {
 }
 
 .about-me-info h5 {
-    color: #FFFFFF;
+    color: var(--title-color);
     font-weight: 800;
     margin: 1.5rem 0;
     font-size: 1.25rem;
@@ -268,7 +273,7 @@ a.navbar-brand:focus {
 }
 
 .about-me-info h5 i {
-    color: #FFFFFF;
+    color: var(--title-color);
     margin-right: 1rem;
 }
 
@@ -347,7 +352,7 @@ a.navbar-brand:focus {
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
-    color: #FFFFFF;
+    color: var(--title-color);
 }
 
 #education h1 span {
@@ -405,7 +410,7 @@ a.navbar-brand:focus {
     letter-spacing: 2px;
     font-weight: 800;
     font-size: 1.25rem;
-    color: #FFFFFF;
+    color: var(--title-color);
 }
 
 .education-info p{
@@ -414,7 +419,7 @@ a.navbar-brand:focus {
 }
 
 .education-date tr:nth-child(2) td {
-    color: #FFFFFF;
+    color: var(--title-color);
 }
 
 @media only screen and (max-width: 768px) {
@@ -458,7 +463,7 @@ a.navbar-brand:focus {
 
 #contact-me-form {
     padding: calc((2.5rem * .5) + var(--min-height-navbar)) calc(7.5rem * .5);
-    color: #FFFFFF;
+    color: var(--title-color);
     text-align: justify;
 }
 
@@ -476,6 +481,10 @@ a.navbar-brand:focus {
     margin: 0 auto;
     text-align: justify;
     margin-top: 5rem;
+}
+
+#contact-me-form form button[type="submit"] {
+    color: 
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and down) */
@@ -510,9 +519,9 @@ a.navbar-brand:focus {
 #contact-me-form textarea {
     width: 100%;
     border: none;
-    background-color: rgba(0,0,0,.25);
+    background-color: rgba(0,0,0,.125);
     padding: 10px 20px;
-    color: #FFFFFF;
+    color: var(--title-color);
     font-size: 1.25rem;
 }
 
@@ -531,20 +540,8 @@ a.navbar-brand:focus {
     margin-bottom: 20px;
 }
 
-#contact-me-form button[type="submit"] {
-    background-color: var(--secondary);
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: 600;
-    font-style: italic;
-    margin-top: 15px;
-}
-
 #contact-me-form button[type="submit"]:hover,
-#contact-me-form button[type="submit"]:focus { background-color: #FFF; }
+#contact-me-form button[type="submit"]:focus { background-color: var(--title-color); }
 
 @media screen and (max-width: 425px) {
     #contact-me-form {
@@ -555,9 +552,9 @@ a.navbar-brand:focus {
 /* Footer */
 footer {
     width: 100%;
-    background-color: rgba(0,0,0,.25);
+    background-color: rgba(0,0,0,.125);
     opacity: 0.9;
-    color: #FFFFFF;
+    color: var(--title-color);
     font-size: 1.25rem;
     text-align: center;
     padding: 10px 0;
@@ -582,7 +579,7 @@ footer {
     }
 }
 
-#contacts-wrapper a { color: #FFF; text-decoration: none; }
+#contacts-wrapper a { color: var(--title-color); text-decoration: none; }
 
 #contacts-wrapper .contact-card {
     flex: 0 1 300px;
@@ -605,6 +602,33 @@ footer {
 #contacts-wrapper .contact-card > .icon i.fa-solid,
 #contacts-wrapper .contact-card > .icon i.fa-brands {
     font-size: 4rem;
-    color: #FFFFFF;
+    color: var(--title-color);
     margin-bottom: 10px;
+}
+
+/* Light Mode Colors */
+.light-mode {
+    --primary: #F1F1F1;
+    --secondary: rgb(38, 50, 64);
+    --title-color: --secondary;
+}
+
+.light-mode a.nav-brand { color: var(--secondary); }
+
+.light-mode #hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: calc(2.5rem * .5) calc(7.5rem * .5);
+    background: linear-gradient(180deg, rgba(195, 191, 199, .8) 0%, rgba(195, 191, 199, 1) 90%), url('../images/me.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--secondary);
+}
+
+.light-mode #hero button:hover, .light-mode #hero button:focus,
+.light-mode #contact-me-form form button[type="submit"]:hover, .light-mode #contact-me-form form button[type="submit"]:focus {
+    background-color: var(--tertiary);
 }

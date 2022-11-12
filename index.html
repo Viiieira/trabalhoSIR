@@ -39,6 +39,9 @@
                 <li class="nav-item">
                     <a href="#contact-me-form" class="nav-link">Contact Me</a>
                 </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-sun nav-link" id="toggleLight"></i>
+                </li>
             </ul>
         </div>
     </div>
@@ -49,10 +52,10 @@
     <div class="info">
         <h1><span class="colored">Hugo Vieira</span></h1>
         <h3>
-            <span>Student</span>, <span>Computer Engineering</span>, <span>IPVC-ESTG</span>
+            Student, Computer Engineering, IPVC-ESTG
         </h3>
         <div id="go-down">
-            <button onclick="window.location.href='#about-me'">↓ See more</button>
+            <button onclick="window.location.href='#about-me'"><i class="fa-solid fa-arrow-down"></i> See more</button>
         </div>
     </div>
 </header>
@@ -193,7 +196,7 @@
             <label for="messageFeild">Message <span class="text-secondary">*</span></label>
             <textarea name="message" id="messageField" cols="30" rows="10" placeholder="Hi Hugo, pleased to talk to you..." required></textarea>
         </div>
-        <button type="submit" style="color: #303030;"><i class="fa-solid fa-paper-plane-top"></i> Send</button>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
     </form>
 
     <div id="contacts-wrapper">
@@ -231,6 +234,7 @@
 <script src="./scripts/popper.min.js"></script>
 <script src="./scripts/bootstrap.min.js"></script>
 <script src="./scripts/main.js"></script>
+<script src="./scripts/toggleLight.js"></script>
 
 </body>
 </html>
