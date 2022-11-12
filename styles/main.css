@@ -302,7 +302,7 @@ a.navbar-brand:focus {
     }
     
     .about-me-card {
-        margin: 3rem 2rem;
+        margin: 3rem 1rem;
     }
 
     .about-me-card:last-child {
@@ -409,7 +409,7 @@ a.navbar-brand:focus {
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
     font-weight: 800;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--title-color);
 }
 
@@ -449,10 +449,6 @@ a.navbar-brand:focus {
         padding: 1rem;
         font-size: .85rem;
         text-indent: 0;
-    }
-
-    .education-card h3 {
-        font-size: 1rem;
     }
 
     .education-date,
@@ -613,6 +609,7 @@ footer {
     --title-color: --secondary;
 }
 
+/* Light Theme Fixes */
 .light-mode a.nav-brand { color: var(--secondary); }
 
 .light-mode #hero {
