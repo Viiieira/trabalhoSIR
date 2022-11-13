@@ -150,7 +150,7 @@ a.navbar-brand:focus {
     display: flex;
     align-items: center;
     padding: calc(2.5rem * .5) calc(7.5rem * .5);
-    background: linear-gradient(180deg, rgba(38, 50, 64, .8) 0%, rgba(38, 50, 64, 1) 90%), url('../images/me.jpg');
+    background: linear-gradient(180deg, rgba(38, 50, 64, .8) 0%, rgba(38, 50, 64, 1) 100%), url('../images/me.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -619,7 +619,7 @@ footer {
     display: flex;
     align-items: center;
     padding: calc(2.5rem * .5) calc(7.5rem * .5);
-    background: linear-gradient(180deg, rgba(195, 191, 199, .8) 0%, rgba(195, 191, 199, 1) 90%), url('../images/me.jpg');
+    background: linear-gradient(180deg, rgba(195, 191, 199, .8) 0%, rgba(195, 191, 199, 1) 100%), url('../images/me.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
