@@ -258,7 +258,8 @@ a.navbar-brand:focus {
 }
 
 .about-me-info p {
-    margin-bottom: 0;
+    text-align: justify;
+    text-indent: 1rem;
 }
 
 .about-me-info h5 {
@@ -562,7 +563,7 @@ footer {
 
 #contacts-wrapper {
     max-width: 90%;
-    margin: 3rem auto 0 auto;
+    margin: 5rem auto 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
