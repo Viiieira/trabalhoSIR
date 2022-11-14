@@ -630,3 +630,7 @@ footer {
 .light-mode #contact-me-form form button[type="submit"]:hover, .light-mode #contact-me-form form button[type="submit"]:focus {
     background-color: var(--tertiary);
 }
+
+textarea {
+    resize: none;
+}
